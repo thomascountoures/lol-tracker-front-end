@@ -1,0 +1,12 @@
+.player-name {
+    color:#ccc;
+    font-size:35px;
+    text-align: left;
+    margin:20px 0;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}

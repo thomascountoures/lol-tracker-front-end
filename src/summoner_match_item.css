@@ -1,0 +1,67 @@
+.match-item {
+    border-radius: 8px;
+    background-color:#515151;
+    margin: 10px 0;
+    color:#ccc;
+    position:relative;
+    padding:15px;
+}
+
+.main-player-info {
+    position:relative;
+}
+
+.match-item .top-info,
+.match-item .game-info {
+    float:left;
+    position:relative;
+}
+
+.match-item .kda {
+    float:right;
+    font-size:20px;
+}
+
+.match-item .top-info {
+    top:10px;
+    left:10px;
+}
+
+.match-item .game-info {
+    top:20px;
+    left:30px;
+}
+
+.match-item span {
+    display:block;
+}
+
+.match-item .champion-info {
+    display:inline-block;
+}
+
+.match-item .champion-info img {
+    max-width:40px;
+    margin-right:5px;
+}
+
+.match-item .hero-name {
+    font-size:20px;
+    font-weight:700;
+}
+
+.match-item .kda-ratio {
+    font-size:28px;
+}
+
+.match-item .d {
+    display:inline;
+}
+
+.match-item.victory {
+    background-color:#006400;
+}
+
+.match-item.defeat {
+    background-color:#8B0000;
+}
