@@ -2,8 +2,10 @@
 
 Made with love.
 
-![alt text](https://imgur.com/a/WL2whVA "jaime")
-![alt text](https://imgur.com/a/sPy7hYL "thomas")
+Track your favourite summoners. Learn about them.
+
+![alt text](https://i.imgur.com/esdyAjb.png "jaime")
+![alt text](https://i.imgur.com/N2vWize.png "thomas")
 
 
 ---
