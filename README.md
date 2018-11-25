@@ -10,7 +10,7 @@ Instructions:
 2. `npm install`
 3. `npm start`
 
-This project requires the `lol-tracker-back-end` project to work. Please go to https://github.com/thomascountoures/lol-tracker-back-end for instructions on how to install that.
+This project requires the `lol-tracker-backend` project to work. Please go to https://github.com/thomascountoures/lol-tracker-backend for instructions on how to install that.
 
 ![alt text](https://i.imgur.com/xjlPmv5.png "jaime")
 ![alt text](https://i.imgur.com/dA8rITy.png "thomas")
