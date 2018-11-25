@@ -4,8 +4,8 @@ Made with love.
 
 Track your favourite summoners. Learn about them.
 
-![alt text](https://i.imgur.com/esdyAjb.png "jaime")
-![alt text](https://i.imgur.com/N2vWize.png "thomas")
+![alt text](https://i.imgur.com/xjlPmv5.png "jaime")
+![alt text](https://i.imgur.com/dA8rITy.png "thomas")
 
 
 ---
