@@ -82,7 +82,7 @@ class SummonerMatchItem extends Component {
      * @param {Number} gameDuration 
      */
     getCreepScorePerMinute(totalMinionsKilled, gameDuration) {
-        return Math.abs(totalMinionsKilled / gameDuration).toFixed(2);
+        return Math.abs(totalMinionsKilled / (gameDuration / 60)).toFixed(2);
     }
     
     /**
