@@ -46,10 +46,9 @@ class SummonerMatches extends Component {
     }
 
     render() {
-        try {
-            // there was no previous errors. we don't want to re-render and call setState again.            
-                let items = this.props.matches.map((match, index) => {
-                    
+        try {            
+            let items = this.props.matches.map((match, index) => {
+                
                 // filter out correct player information from group of players
                 // pass them as props to individual match item
                 const playerIdentity = match.playerIdentities.find((playerObj) => {
@@ -60,7 +59,7 @@ class SummonerMatches extends Component {
                     const playerMatchDetails = match.playerMatchDetails.find((playerObj) => {
                         return playerObj.participantId === playerIdentity.participantId;
                     });
-    
+
                     const targetChampion = this.getChampionObj(playerMatchDetails);
                     
                     return (             
@@ -79,8 +78,7 @@ class SummonerMatches extends Component {
                 } else {
                     return (
                         <div className="text-danger">Unable to load this match. Please try again.</div>
-                    );
-                    //this.setState({ errorMessage: "An error occurred. Please try again." });
+                    );                    
                 }
                 
                 

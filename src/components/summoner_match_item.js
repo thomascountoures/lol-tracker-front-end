@@ -63,10 +63,16 @@ class SummonerMatchItem extends Component {
      * Get the icon for the match champion
      */
     getChampionIcon() {
-        const { championObject } = this.props;
-        console.log("championObj in method", championObject);
+        let { championObject: { name } } = this.props;
+        
+        // some of these heroes have special characters in their names.
+        // like uh, they sound like protoss names (Rek'Sai)
+        // we need to remove the special characters so they load the proper images.
+        // the images don't have special characters. 
+        name = name.replace(/[^A-Z0-9]/ig, "");
+        
         return (
-            <img src={`http://localhost:1337/img/champion/${championObject.name}.png`} />
+            <img src={`http://localhost:1337/img/champion/${name}.png`} />
         );
     }
 
@@ -87,12 +93,14 @@ class SummonerMatchItem extends Component {
         const hash = {};
         for(var key in stats) {
             if(stats.hasOwnProperty(key)) {
-                if(key.indexOf("item") > -1 && !(key in hash)) { 
-                    hash[key] = stats[key];
+                if(key.indexOf("item") > -1 && !(key in hash)) {
+                    if(stats[key] !== 0) {
+                        hash[key] = stats[key];                    
+                    } 
                 } 
             }
         }
-        return this.renderItems(hash); debugger;
+        return this.renderItems(hash);
     }
 
     /**

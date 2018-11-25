@@ -33,16 +33,16 @@ class SummonerApp extends Component {
         this.setState({ championJSON });           
     }
 
-    async handleSearch(summonerName) {
+    async handleSearch(summonerName, resultsDesired) {
 
         this.setState({ matches: [], errorMessage: "" });
         
-        this.setState({ loading: true }); debugger;
-
-        const response = await fetch(`http://localhost:1337/summoner/${encodeURIComponent(summonerName)}`);
+        this.setState({ loading: true }); 
+        
+        const response = await fetch(`http://localhost:1337/summoner/${encodeURIComponent(summonerName)}?resultsDesired=${encodeURIComponent(resultsDesired)}`);
 
         // set it to 200 on the backend in this case
-        if(response.status === 200) {
+        if(response.status === 200 || response.status === 304) {
             const matches = await response.json();
             if(matches.length > 0) {
                 // update matches state
@@ -51,7 +51,8 @@ class SummonerApp extends Component {
                 this.setState({ errorMessage: "No matches found for this player", loading: false });
                 return;
             }
-            
+        } else if(response.status === 429) {
+            this.setState({ errorMessage: "Server error. Some JSON wasn't returned properly. Please try again." });
         } else {
             this.setState({ errorMessage: "Server error. Player not found. Please try again and search for a new player." });
             return;
@@ -97,7 +98,7 @@ class SummonerApp extends Component {
                         playerName={this.state.player} />
 
                         {this.state.loading && <img src={loader} alt="Loader" />}
-                        <div class="text-danger">{this.state.errorMessage}</div>
+                        <div className="text-danger">{this.state.errorMessage}</div>
                 </div>
             );
         }
