@@ -1,3 +1,15 @@
+## League of Legends Tracker App - by Thomas Countoures
+
+Made with love.
+
+Track your favourite summoners. Learn about them.
+
+![alt text](https://i.imgur.com/xjlPmv5.png "jaime")
+![alt text](https://i.imgur.com/dA8rITy.png "thomas")
+
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
