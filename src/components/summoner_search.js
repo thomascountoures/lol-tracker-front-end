@@ -24,14 +24,12 @@ class SummonerSearch extends Component {
      * @param {*} event 
      */
     handleKeyPress(event) {
-        if(event.key === 'Enter') {
-            debugger;            
+        if(event.key === 'Enter') {            
             this.props.handleSearch(event.target.value, this.state.resultsDesired); 
         }
     }
 
-    handleUpdateDesiredResults(event) {
-        debugger;
+    handleUpdateDesiredResults(event) {        
         this.setState({ resultsDesired: event.target.value });
     }
 
